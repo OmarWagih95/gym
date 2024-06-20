@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 const Page = () => {
@@ -12,6 +12,8 @@ const Page = () => {
     const blogContent=searchParams.get('content');
     const blogCover=searchParams.get('coverImg');
   return (
+    <Suspense>
+
     <div className='h-auto p-10 md:p-28 flex justify-center items-center text-black bg-gray-100'>
       <div className='h-auto w-[700px] flex flex-col items-center p-5 border-2 border-gray-300'>
         <div className='flex w-full flex-col justify-start items-start mb-2 '>
@@ -27,6 +29,7 @@ const Page = () => {
         <p className='font-semibold mt-3 text-sm'>{blogContent}</p>
       </div>
     </div>
+    </Suspense>
 )
 }
 
