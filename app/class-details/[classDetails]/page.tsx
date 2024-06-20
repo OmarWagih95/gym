@@ -8,7 +8,9 @@ const ClassDetails = ({params}:{
   
   console.log(params.classDetails);
   return (
-    <div className='bg-white pt-20 text-black w-screen h-screen'>{params.classDetails}</div>
+    <div className='bg-white pt-20 text-black flex justify-center items-center w-screen h-screen'>
+      <h1 className='h4'>INFORMATION WILL BE ADDED SOON</h1>
+    </div>
   )
 }
 
