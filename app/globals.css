@@ -2,32 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+@layer base {
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply font-roboto;
+
+}
+h1,h2,h3,h4,h5,h6{
+  @apply font-oswald uppercase font-bold
+}
+.h1{
+  @apply text-white text-7xl lg:text-[72px] tracking-[-3]
+}
+.h2{
+  @apply text-[36px]
+}
+.h3{
+  @apply text-[32px]
+}
+.h4{
+  @apply text-[28px]
+}
+.h5{
+  @apply text-[24px]
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-black min-w-[210px] flex flex-col gap-2 justify-center items-center;
   }
-}
+  
+  }
+    .active{
+      @apply 
+      text-accent;
+      @apply 
+    
+      border-accent;
+    }
+/* 
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets 
+    {
+      @apply bg-accent;
+          } */
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-horizontal.swiper-pagination-bullets.swiper-pagination-bullet {
+@apply bg-accent;
+    }
+
+
