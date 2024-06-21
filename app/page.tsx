@@ -6,6 +6,7 @@ import Team from "./components/Team";
 import Membership from "./components/Membership";
 import Testimonials from "./components/Testimonials";
 import Blogs from "./components/Blogs";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -16,7 +17,10 @@ export default function Home() {
   <Team/>
   <Membership/>
   <Testimonials/>
+  <Suspense>
+
   <Blogs/>
+  </Suspense>
 </main>
   );
 }
