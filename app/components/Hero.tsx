@@ -4,11 +4,12 @@ import React from 'react'
 import CustomeButton from './CustomeButton'
 import{motion} from'framer-motion';
 import { fadeIn } from '../variants';
+import {Link as ScrollLink} from 'react-scroll';
 
 
 const Hero = () => {
   return (
-    <section id='heroSec' className='overflow-x-hidden flex bg-hero bg-no-repeat bg-cover bg-center h-[80vh] lg:h-screen'>
+    <section id='heroSec' className='overflow-x-hidden flex justify-center bg-hero bg-no-repeat bg-cover bg-center h-[80vh] lg:h-screen'>
       <div className='hidden lg:flex w-1/2' ></div>
       <div className='flex pt-20 lg:pt-40 flex-col lg:w-1/2 text-center lg:text-start items-center lg:items-start justify-center lg:justify-start pr-4'>
      <motion.h1 className='h1'
@@ -39,6 +40,8 @@ const Hero = () => {
       {/* <CustomeButton text='Get Started'/> */}
       <div className='flex gap-2 mt-3'>
 
+      <ScrollLink to='about' smooth={true} spy offset={-40} >
+
       < motion.button 
         variants={fadeIn({direction:'right',delay:1.4})}
         initial='hidden'
@@ -47,7 +50,10 @@ const Hero = () => {
       className='rounded-sm w-[170px] h-[52px] bg-black border-2 border-accent hover:bg-accent  cursor-pointer uppercase transition duration-500 text-white'>
         Learn More
       </motion.button>
-      
+      </ScrollLink>
+
+      <ScrollLink to='membership' smooth={true} spy offset={-25}>
+
       < motion.button 
         variants={fadeIn({direction:'left',delay:1.5})}
         initial='hidden'
@@ -56,6 +62,7 @@ const Hero = () => {
       className='rounded-sm w-[170px] h-[52px] bg-accent cursor-pointer uppercase transition duration-500 hover:bg-black text-white'>
         get started
       </motion.button>
+      </ScrollLink>
       </div>
       </div>
     </section>

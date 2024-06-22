@@ -12,12 +12,11 @@ const Page = () => {
     const blogContent=searchParams.get('content');
     const blogCover=searchParams.get('coverImg');
   return (
-    <Suspense>
 
     <div className='h-auto p-10 md:p-28 flex justify-center items-center text-black bg-gray-100'>
       <div className='h-auto w-[700px] flex flex-col items-center p-5 border-2 border-gray-300'>
         <div className='flex w-full flex-col justify-start items-start mb-2 '>
-        <h1 className='h2  flex justify-start max-w-[500px]' >{blogTitle}</h1>
+        <h1 className='h4 md:h2  flex justify-start max-w-[500px]' >{blogTitle}</h1>
         <p className='text-gray-400 text-sm max-w-[500px] '>{blogSecondTitle}</p>
 
         </div>
@@ -29,7 +28,6 @@ const Page = () => {
         <p className='font-semibold mt-3 text-sm'>{blogContent}</p>
       </div>
     </div>
-    </Suspense>
 )
 }
 
