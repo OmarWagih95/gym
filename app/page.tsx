@@ -17,10 +17,9 @@ export default function Home() {
   <Team/>
   <Membership/>
   <Testimonials/>
-  <Suspense>
 
   <Blogs/>
-  </Suspense>
+  
 </main>
   );
 }
