@@ -6,7 +6,6 @@ import Team from "./components/Team";
 import Membership from "./components/Membership";
 import Testimonials from "./components/Testimonials";
 import Blogs from "./components/Blogs";
-import { Suspense } from "react";
 
 export default function Home() {
   return (
