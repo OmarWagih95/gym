@@ -15,7 +15,7 @@ const roboto = Roboto({ subsets: ["latin"],
 variable:'--font-roboto' });
 
 export const metadata: Metadata = {
-  title: "Fit Physique Gym",
+  title: "FitPhysique Gym",
   description: "",
 };
 
